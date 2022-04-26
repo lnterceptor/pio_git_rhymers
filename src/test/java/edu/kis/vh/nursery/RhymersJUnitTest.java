@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class RhymersJUnitTest {
 
-    public static final int COUNT = 888;
+    private static final int COUNT = 888;
 
     @Test
     public void testCountIn() {

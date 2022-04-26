@@ -4,10 +4,26 @@ public class DefaultCountingOutRhymer {
 
     private static final int SIZE = 12;
     private static final int ERROR = -1;
-    private static final int FULL = 11;
-    private final int[] numbers = new int[SIZE];
+    private static int FULL = 11;
+    private final int[] numbers = new int[getSIZE()];
 
-    private int total = ERROR;
+    private int total = getERROR();
+
+    public static int getSIZE() {
+        return SIZE;
+    }
+
+    public static int getERROR() {
+        return ERROR;
+    }
+
+    public static int getFULL() {
+        return FULL;
+    }
+
+    public static void setSIZE(int value) {
+        FULL = value;
+    }
 
     public void countIn(int in) {
         if (!isFull())
@@ -15,22 +31,22 @@ public class DefaultCountingOutRhymer {
     }
 
     public boolean callCheck() {
-        return getTotal() == ERROR;
+        return getTotal() == getERROR();
     }
 
     public boolean isFull() {
-        return getTotal() == FULL;
+        return getTotal() == getFULL();
     }
 
     protected int peekaboo() {
         if (callCheck())
-            return ERROR;
+            return getERROR();
         return numbers[getTotal()];
     }
 
     public int countOut() {
         if (callCheck())
-            return ERROR;
+            return getERROR();
         return numbers[total = getTotal() - 1];
     }
 

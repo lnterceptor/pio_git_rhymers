@@ -9,6 +9,9 @@ public class DefaultCountingOutRhymer {
 
     private int total = getERROR();
 
+    /**
+     * @return funkcja zwraca wielkość tablicy
+     */
     public static int getSIZE() {
         return SIZE;
     }

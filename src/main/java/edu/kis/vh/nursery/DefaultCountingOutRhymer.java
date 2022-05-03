@@ -44,7 +44,7 @@ public class DefaultCountingOutRhymer {
     public int countOut() {
         if (callCheck())
             return getERROR();
-        return numbers[total = getTotal() - 1];
+        return numbers[total--];
     }
 
     public int getTotal() {
